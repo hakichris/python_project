@@ -1,41 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Blog</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTVPRWGLL6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-KTVPRWGLL6');
-</script>
-  </head>
-  
-  <body>
-   <h1>Blog posts</h1>
+{% extends "blog/base.html" %}
+{% block content %}
     {% for post in posts %}
 
      <h1>{{ post.title}}</h1>
      <p> by {{ post.author }} on {{post.date_posted}} </p>
      <p>{{post.content}}</p>
 
-    {%endfor%}
-     
-  </body>
-</html>
+    {% endfor %}
+{% endblock content %}  
+
