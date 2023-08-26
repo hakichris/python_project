@@ -5,24 +5,24 @@ from django.shortcuts import render
 posts = [
 
   {
-      'author': 'chris',
-      'title': 'Love of my life',
+      'author': 'John',
+      'title': 'Love of my life 1',
       'content': 'My love story started when I was 6',
       'date_posted': 'August 6,2018'
   },
 
 
   {
-      'author': 'chris',
-      'title': 'Love of my life',
+      'author': 'John',
+      'title': 'Love of my life 2',
       'content': 'My love story started when I was 6',
       'date_posted': 'August 6,2018'
   },
 
 
   {
-      'author': 'chris',
-      'title': 'Love of my life',
+      'author': 'John',
+      'title': 'Love of my life 3',
       'content': 'My love story started when I was 6',
       'date_posted': 'August 6,2018'
   }
@@ -36,4 +36,4 @@ def home(request):
     return render(request, 'blog/home.html', context)
 
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'title': 'About'})
