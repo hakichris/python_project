@@ -6,11 +6,15 @@ from django.contrib import messages
 def register(request):
     if request.method == 'POST':
          form = UserCreationForm(request.POST)
+         print("at least i got here")
          if form.is_valid():
-              username= form.cleaned_data.get('username')
+              print("yes the form is validated")
+              username = form.cleaned_data.get('username')
               messages.success(request, f'Acccount created for {username}!')
               return redirect('blog-home')
     else:
-        form= UserCreationForm()
+        print("i am here, I did not make it")
+        form = UserCreationForm()
+       
     return render(request, 'users/register.html', {'form': form})
  
