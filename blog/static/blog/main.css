@@ -22,12 +22,12 @@ ul {
 }
 
 a {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-dark .navbar-brand:hover {
-    color: #041c2a;
-  }
+  color: #041c2a;
+}
 
 .site-header .navbar-nav .nav-link {
   color: #041c2a;
