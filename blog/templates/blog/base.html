@@ -3,10 +3,11 @@
   <head>
     {% load static %}
     {% load bootstrap5 %}
-    {% load %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+   
     <link  rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    
     {% if title %}
         <title>Blog - {{ title }}</title>
     {% else %}
@@ -26,9 +27,9 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">HAKIKRIS BLOG</a>
+          <a class="navbar-brand nav-link mr-4" href="{% url 'blog-home' %}">HAKIKRIS BLOG</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -40,6 +41,7 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav ms-auto">
               {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a> 
               <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a> 
               {% else %}
               <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
