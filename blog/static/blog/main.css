@@ -18,7 +18,7 @@ ul {
 }
 
 .navbar-dark .navbar-brand {
-  color: #614304;
+  color: #2586da;
 }
 
 a {
@@ -26,7 +26,7 @@ a {
 }
 
 .navbar-dark .navbar-brand:hover {
-  color: #041c2a;
+  color: none;
 }
 
 .site-header .navbar-nav .nav-link {
