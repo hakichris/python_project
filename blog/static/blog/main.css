@@ -13,6 +13,10 @@ h6 {
   color: #444444;
 }
 
+.media {
+  display: flex;
+}
+
 ul {
   margin: 0;
 }
