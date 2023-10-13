@@ -10,7 +10,7 @@ class UserRegisterForm(UserCreationForm):
        model = User
        fields = ['username', 'email', 'password1', 'password2']
     
-class UseUpdateForm(forms.ModelForm):
+class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
     class Meta: 
