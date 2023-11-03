@@ -20,8 +20,6 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView): 
     model = Post
-    template_name = 'blog/post_detail.html'
-
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
